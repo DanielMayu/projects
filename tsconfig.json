@@ -1,0 +1,21 @@
+{
+    "buildOnSave": true,
+    "compilerOptions": {
+        "target": "es5",
+        "module": "system",
+        "charset": "utf-8",
+        "sourceMap": false,
+        "out": "./assets/scripts/app.js"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "bower_components",
+        "typings"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}

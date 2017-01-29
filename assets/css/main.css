@@ -1,0 +1,148 @@
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left:0;
+    background-color: rgba(0,0,0, 0.9);
+    /*background-color: black;*/
+    overflow-x: auto;
+    overflow: hidden;
+    text-align: center;
+    transition: .20s;
+}
+.wrapper-video {
+    position: relative;
+}
+.logo-transparent {
+    width: 280px;
+    position: relative;
+    top: 41px;
+    left: 38px;
+}
+.logo-transparent img {
+    width: 100%;
+}
+.text-transparent {
+    width: 100%;
+    text-align: center;
+    top: 33%;
+    position: relative;
+}
+.text-transparent-content {
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+}
+.wrapper-video, .wrapper-content {
+    background: url(../../assets/images/bg.png) repeat 0 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+}
+#homeAd {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: block !important;
+}
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+.align-botton {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+/* The navigation links inside the overlay */
+.overlay.closebtn a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.jwlogo {
+    margin: -35000px;
+    display: none !important;
+}
+/* video */
+.site-social-nav ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.site-social-nav li {
+    margin-top: 0;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.site-social-nav li a:link, .site-social-nav li a:visited, .site-social-nav li a:active, .site-social-nav li a:hover {
+    background-size: 100% auto;
+    display: block;
+    height: 25px;
+    overflow: hidden;
+    text-indent: -999px;
+    width: 25px;
+}
+.site-social-nav .social-link-fb:link, .site-social-nav .social-link-fb:visited, .site-social-nav .social-link-fb:active, .site-social-nav .social-link-fb:hover {
+    background: url('../../assets/images/facebook.svg') no-repeat 0 0;
+}
+.site-social-nav .social-link-tw:link, .site-social-nav .social-link-tw:visited, .site-social-nav .social-link-tw:active, .site-social-nav .social-link-tw:hover {
+    background: url('../../assets/images/twitter.svg') no-repeat 0 0;
+}
+.site-social-nav .social-link-yt:link, .site-social-nav .social-link-yt:visited, .site-social-nav .social-link-yt:active, .site-social-nav .social-link-yt:hover {
+    background: url('../../assets/images/youtube.svg') no-repeat 0 0;
+}
+.site-social-nav .social-link-vo:link, .site-social-nav .social-link-vo:visited, .site-social-nav .social-link-vo:active, .site-social-nav .social-link-vo:hover {
+    background: url('../../assets/images/vimeo.svg') no-repeat 0 0;
+}
+.site-social-nav .social-link-lk:link, .site-social-nav .social-link-lk:visited, .site-social-nav .social-link-lk:active, .site-social-nav .social-link-lk:hover {
+    background: url('../../assets/images/linkedin.png') no-repeat 0 -1px;
+    position: relative;
+    top: -4px;
+}
+.site-social-nav {
+    display: block;
+    float: right;
+    margin-right: 55px;
+    margin-top: -13px;
+}
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}

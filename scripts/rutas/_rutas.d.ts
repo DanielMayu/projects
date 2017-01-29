@@ -1,0 +1,1 @@
+/// <reference path="./ademia.ts" />

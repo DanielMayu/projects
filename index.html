@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="aplicacion">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="p:domain_verify" content="050245aa42326f85203d2967ff62f451"/>
+        <meta name="keywords" content="T.I.,Management, Administration,Best practice,Software,software de aplicacion,software de Sistema,software de programacion,software comercial,Cadena de Suministro,Capacitaciones,Analisis de Riesgo,Design Thinking,Oceano Azul,Black Belt,Tecnología de información,Innovación ,innovación tecnologica,innovación disruptiva,innovación empresarial,Ademia,Tecnologia,tecnologias de la informacion,tecnologias de la manufactura,Consultoria,consultoria empresarial,Cultura empresarial,Dirección,dirección administrativa,Six Sigma,Gestion de calidad,ISO,iso 9000,iso 14001,SIGA,Lean Manufacturing,OEA,Acciones Correctivas,Gestion empresarial,Productividad,productividad laboral,Regulaciones,regulaciones y restricciones no arancelarias,soluciones,Certificaciones ,Reestructuración,Organizacional,organizacional empresarial,C-TPAT,Digitalización , BPM,Bpmn,BSC,ISO 9001:2015,Desarrollo de software,Calidad,optimizar ,Mejora continua,Planeación estrategica,planeación,ITIL,Tiempo Real,Auditoria Interna">
+        <title>Ademia</title>
+        <link rel="icon" type="image/png" href="./assets/images/favicon.png?=v7">
+        <!-- bower:css -->
+        <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css"></link>
+        <link rel="stylesheet" href="assets/bower_components/components-font-awesome/css/font-awesome.css"></link>
+        <link rel="stylesheet" href="assets/bower_components/angular-toastr/dist/angular-toastr.css"></link>
+        <link rel="stylesheet" href="assets/css/main.css"></link>
+        <!-- endbower -->
+        <base href="/">
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-88751344-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+    </head>
+    <body>
+        <div ng-include="'./assets/views/home.navbar.html'"></div>
+        <div ui-view></div>
+        <div ng-include="'./assets/views/home.footer.html'"></div>
+
+        <!-- bower:js -->
+        <script src="assets/bower_components/angular/angular.js"></script>
+        <script src="assets/bower_components/jquery/dist/jquery.js"></script>
+        <script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="assets/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="assets/bower_components/angular-messages/angular-messages.js"></script>
+        <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="assets/bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+        <!-- endbower -->
+        <script src="assets/scripts/app.js"></script>
+        <script src="assets/js/jwplayer.js"></script>
+
+
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+
+
+            <!-- Overlay content -->
+            <div class="wrapper">
+                <div class="wrapper-video">
+                    <div class="wrapper-content">
+                        <div class="logo-transparent">
+                            <img src="assets/images/ademia-transparent-complete.png">
+                        </div>
+                        <div class="social-networks">
+                            <div class="social-networks-content">
+                                <div class="site-social-nav">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/ademiaIT/" target="_blank" class="social-link social-link-fb">Siguenos en Facebook</a></li>
+                                        <li><a href="https://twitter.com/ADEMIA9" target="_blank" class="social-link social-link-tw">Siguenos en Twitter</a></li>
+                                        <li><a href="https://www.youtube.com/channel/UCTVWSAQnA2YmeoXOSvcPxKg" target="_blank" class="social-link social-link-yt">Siguenos en Youtube</a></li>
+                                        <li><a href="https://vimeo.com/ademia" target="_blank" class="social-link social-link-vo">Siguenos en Vimeo</a></li>
+                                        <li><a href="https://www.linkedin.com/company/ademia" target="_blank" class="social-link social-link-lk">Siguenos en Linkedin</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="text-transparent">
+                            <div class="text-transparent-content">
+                                Global Best Practices in IT Management
+                            </div>
+                        </div>
+                        <!-- Button to close the overlay navigation -->
+                        <!-- a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a -->
+                        <div class="row align-botton">
+                            <a class="btn btn-primary" target="_blank" href="https://docs.google.com/forms/d/1m0wKlbwtG5UO_LOCZXqEw6mrr8BzwhWnNfG6-NLk7Zw/viewform?edit_requested=true">Contestar la encuesta</a>
+                            <a href="javascript:void(0)" class="btn btn-primary" onclick="closeNav()">Conócenos</a>
+                        </div>
+                    </div>
+                    <div id="homeAd">
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                document.getElementById("myNav").style.opacity = "100";
+            });
+            /*
+             function openNav() {
+             document.getElementById("myNav").style.height = "100%";
+             }*/
+            function closeNav() {
+                document.getElementById("myNav").style.opacity = "0";
+                document.getElementById("myNav").remove();
+            }
+            var playerInstance = jwplayer("homeAd");
+            playerInstance.setup({
+                file: "assets/mp4/cd-juarez.mp4?v2",
+                mediaid: "xZlYNUoN-3z6iRhD7",
+                aspectratio: '16:9',
+                autostart: true,
+                controls: false,
+                image: 'bg.png',
+                repeat: false,
+                type: 'mp4',
+                repeat:true,
+                events: {
+                    onTime: function(e){
+                        /*if (parseInt(e.position) >= 30) jwplayer("backVideo").seek(0);*/
+                    }
+                },
+                width: '100%'
+            });
+        </script>
+
+    </body>
+</html>
